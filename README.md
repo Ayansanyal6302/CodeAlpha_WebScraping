@@ -1,53 +1,144 @@
-# CodeAlpha_WebScraping
+# 📚 Book Store Web Scraper
 
-A boilerplate Python project set up for a Data Analytics internship web scraping task. This repository contains the directory structure, dependencies, and configuration, allowing the scraping implementation to be written manually.
+A Python web scraping project developed as part of the **CodeAlpha Python Programming Internship**.
 
-## Project Structure
+---
+
+## 📌 Project Overview
+
+This project scrapes book information from the **Books to Scrape** website (http://books.toscrape.com/) using Python. It automatically navigates through all **50 pages**, extracts details of **1000 books**, and stores the collected data in a CSV file for further analysis.
+
+---
+
+## 🚀 Features
+
+- Scrapes all 50 pages of the website
+- Collects information for 1000 books
+- Extracts the following details:
+  - 📖 Title
+  - 💷 Price
+  - ⭐ Rating
+  - 📦 Availability
+- Stores the extracted data in a Pandas DataFrame
+- Exports the dataset to a CSV file
+- Implements automatic pagination
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Requests
+- BeautifulSoup4
+- Pandas
+- lxml
+
+---
+
+## 📂 Project Structure
 
 ```text
 CodeAlpha_WebScraping/
 │
-├── scraper.py         # Main web scraping script (to be implemented manually)
-├── requirements.txt   # Project dependencies
-├── README.md          # Project documentation
-├── .gitignore         # Git ignore file
-├── output/            # Directory for storing scraped data (CSV, JSON, etc.)
-├── screenshots/       # Directory for storing screenshots or visual outputs
-├── utils/             # Helper utilities and modules
-│   └── __init__.py
-└── venv/              # Python virtual environment (ignored by Git)
+├── output/
+│   └── books.csv
+│
+├── screenshots/
+│   ├── terminal_output.png
+│   └── excel_output.png
+│
+├── scraper.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
-## Installation & Setup
+---
 
-1. **Clone or navigate to the repository:**
-   ```bash
-   cd CodeAlpha_WebScraping
-   ```
+## ⚙️ Installation
 
-2. **Activate the virtual environment:**
-   - **On Windows (PowerShell):**
-     ```powershell
-     .\venv\Scripts\Activate.ps1
-     ```
-   - **On Windows (CMD):**
-     ```cmd
-     .\venv\Scripts\activate.bat
-     ```
-   - **On Unix/macOS:**
-     ```bash
-     source venv/bin/activate
-     ```
+### 1. Clone the repository
 
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/Ayansanyal6302/CodeAlpha_WebScraping.git
+```
 
-## Technologies & Packages Used
+### 2. Navigate to the project folder
 
-- **Python 3**: The core programming language.
-- **requests**: For sending HTTP/HTTPS requests to retrieve target web pages.
-- **beautifulsoup4**: For parsing HTML and XML documents and extracting data.
-- **pandas**: For data manipulation, analysis, and exporting scraped data into structured formats (like CSV/Excel).
-- **lxml**: A fast and feature-rich HTML/XML parser library used by BeautifulSoup for faster processing.
+```bash
+cd CodeAlpha_WebScraping
+```
+
+### 3. Install the required libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the scraper
+
+```bash
+python scraper.py
+```
+
+---
+
+## 📊 Output
+
+The scraper successfully extracts information from **1000 books** across **50 pages** and stores the dataset in:
+
+```text
+output/books.csv
+```
+
+The exported dataset contains the following columns:
+
+| Title | Price | Rating | Availability |
+|-------|-------|--------|--------------|
+| A Light in the Attic | £51.77 | Three | In stock |
+| Tipping the Velvet | £53.74 | One | In stock |
+| ... | ... | ... | ... |
+
+---
+
+## 📸 Screenshots
+
+### 💻 Terminal Output
+
+![Terminal Output](screenshots/terminal_output.png)
+
+### 📊 CSV Output
+
+![CSV Output](screenshots/excel_output.png)
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project, I learned:
+
+- Sending HTTP requests using the Requests library
+- Parsing HTML using BeautifulSoup
+- Extracting data using HTML tags, classes, and attributes
+- Implementing pagination for multi-page web scraping
+- Working with nested loops
+- Organizing data using Python dictionaries and lists
+- Creating Pandas DataFrames
+- Exporting datasets to CSV files
+- Managing a project using Git and GitHub
+
+---
+
+## 📄 License
+
+This project was created for educational purposes as part of the **CodeAlpha Python Programming Internship**.
+
+---
+
+## 👨‍💻 Author
+
+**Ayan Sanyal**
+
+Aspiring Data Analyst
+
+Developed as part of the **CodeAlpha Python Programming Internship**.
